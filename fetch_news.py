@@ -63,14 +63,13 @@ def parse_date(date_str):
     return None
 
 
-def is_from_yesterday(date_obj):
-    """检查日期是否是昨天"""
+def is_from_recent_days(date_obj, days=2):
+    """检查日期是否在最近几天内"""
     if not date_obj:
         return False
-    yesterday = datetime.now() - timedelta(days=1)
-    return (date_obj.year == yesterday.year and
-            date_obj.month == yesterday.month and
-            date_obj.day == yesterday.day)
+    now = datetime.now()
+    delta = now - date_obj
+    return delta.days >= 0 and delta.days < days
 
 
 def calculate_score(title, summary, keywords, exclude_keywords):
@@ -122,8 +121,8 @@ def fetch_rss_feed(source_name, source_config):
             # 解析日期
             date_obj = parse_date(published)
 
-            # 跳过日期不是昨天的新闻（除非无法确定日期）
-            if date_obj and not is_from_yesterday(date_obj):
+            # 跳过日期不在最近2天的新闻（除非无法确定日期）
+            if date_obj and not is_from_recent_days(date_obj, days=2):
                 continue
 
             # 计算得分

@@ -43,6 +43,36 @@ SOURCES = {
         "type": "rss",
         "enabled": True,
     },
+    "ifeng": {
+        "name": "凤凰科技",
+        "url": "https://tech.ifeng.com/rss/",
+        "type": "rss",
+        "enabled": True,
+    },
+    "ithome": {
+        "name": "IT之家",
+        "url": "https://www.ithome.com/rss/",
+        "type": "rss",
+        "enabled": True,
+    },
+    "lieyunwang": {
+        "name": "猎云网",
+        "url": "https://www.lieyunpro.com/feed",
+        "type": "rss",
+        "enabled": True,
+    },
+    "tmtpost": {
+        "name": "钛媒体",
+        "url": "https://www.tmtpost.com/rss",
+        "type": "rss",
+        "enabled": True,
+    },
+    "geekpark": {
+        "name": "极客公园",
+        "url": "https://www.geekpark.net/rss",
+        "type": "rss",
+        "enabled": True,
+    },
     # 国内综合新闻
     "thepaper": {
         "name": "澎湃新闻",
@@ -50,36 +80,11 @@ SOURCES = {
         "type": "rss",
         "enabled": True,
     },
-    "caixin": {
-        "name": "财新",
-        "url": "http://cn.feeds.reuters.com/reuters/CNTopNews",
+    "sina": {
+        "name": "新浪科技",
+        "url": "https://feed.mix.sina.com.cn/api/roll/get?pageid=153&lid=2519&k=&num=20&page=1",
         "type": "rss",
-        "enabled": False,  # 财新RSS可能需要特殊处理
-    },
-    # 海外媒体
-    "bbc": {
-        "name": "BBC News",
-        "url": "http://feeds.bbci.co.uk/news/technology/rss.xml",
-        "type": "rss",
-        "enabled": False,  # 已禁用英文报道
-    },
-    "reuters": {
-        "name": "Reuters",
-        "url": "https://www.reutersagency.com/feed/?best-topics=tech&post_type=best",
-        "type": "rss",
-        "enabled": False,  # 已禁用英文报道
-    },
-    "techcrunch": {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/feed/",
-        "type": "rss",
-        "enabled": False,  # 已禁用英文报道
-    },
-    "theverge": {
-        "name": "The Verge",
-        "url": "https://www.theverge.com/rss/index.xml",
-        "type": "rss",
-        "enabled": False,  # 已禁用英文报道
+        "enabled": True,
     },
 }
 
